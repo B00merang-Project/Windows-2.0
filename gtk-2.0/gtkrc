@@ -1204,8 +1204,8 @@ style "menu_text" = "menu_item" {
 widget_class "*<GtkLabel>"                                          style "text"
 widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text" 
 widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
-widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
-widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"
+widget_class "*<GtkNotebook>*<GtkLabel>"                            style "notebook"
+widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "notebook"
 
 # panel theming
 include "panel.rc"
