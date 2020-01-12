@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Windows 2.0
+Comment=Windows 2.0 UI for Linux OSes
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Windows 2.0
+MetacityTheme=Windows 2.0
+IconTheme=Windows 2.0
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close
