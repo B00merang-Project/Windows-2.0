@@ -1325,17 +1325,21 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
+  scale > fill,
   scale > trough {
     border: 1px solid #000000;
     border-radius: 0px;
     background-color: #FFFFFF;
     background-image: linear-gradient(to bottom left, #FFFFFF 33%, #000000 34%, #000000 66%, #FFFFFF 67%);
     background-size: 3px 3px, auto; }
+    scale > fill:disabled,
     scale > trough:disabled {
       border-color: #000000;
       background-color: #f2f2f2; }
+      scale > fill:disabled:backdrop,
       scale > trough:disabled:backdrop {
         background-color: #f2f2f2; }
+    scale > fill:backdrop,
     scale > trough:backdrop {
       background-color: #FFFFFF; }
   scale > trough > highlight {
@@ -1360,9 +1364,9 @@ scale {
     scale > trough > slider:backdrop {
       color: #000000;
       background-color: #FFFFFF; }
-    scale.vertical > trough > slider {
-      min-width: 12px;
-      min-height: 16px; }
+  scale.vertical > trough > slider {
+    min-width: 12px;
+    min-height: 16px; }
   scale.fine-tune.horizontal {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -1671,34 +1675,40 @@ calendar {
   border-style: solid;
   border-color: #000000;
   color: #000000; }
-  calendar.header {
+  calendar > header {
     border: none;
     border-bottom: 1px solid black;
     color: #000000; }
-  calendar.button {
-    color: rgba(0, 0, 0, 0.45); }
-    calendar.button:hover {
-      color: #000000; }
-    calendar.button:backdrop {
-      color: rgba(0, 0, 0, 0.45); }
-    calendar.button:disabled {
-      color: rgba(128, 128, 128, 0.45); }
-  calendar:selected {
-    border-radius: 5px;
-    color: #FFFFFF;
-    background-color: #FC5252; }
-    calendar:selected:backdrop {
+    calendar > header > button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      border-radius: 0; }
+      calendar > header > button:hover {
+        color: #000000; }
+      calendar > header > button:backdrop {
+        color: #000000; }
+      calendar > header > button:disabled {
+        color: gray; }
+  calendar > grid > label.today {
+    box-shadow: inset 0px -2px #000000; }
+    calendar > grid > label.today:selected {
+      box-shadow: none; }
+  calendar > grid > label:focus {
+    outline-color: #000000;
+    outline-offset: -2px;
+    outline-width: 2px;
+    outline-style: solid; }
+  calendar > grid > label.day-number {
+    padding: 3px; }
+    calendar > grid > label.day-number:selected {
       color: #FFFFFF;
-      background-color: #FC5252; }
-  calendar:indeterminate {
-    color: alpha(currentColor, 0.1); }
-  calendar.highlight {
-    color: gray; }
-    calendar.highlight:backdrop {
-      color: gray; }
-  calendar:backdrop {
-    color: #000000;
-    border-color: #000000; }
+      background-color: #FC5252;
+      border-radius: 0px; }
+    calendar > grid > label.day-number:checked {
+      background-color: rgba(252, 82, 82, 0.3); }
+  calendar > grid > label.day-number.other-month {
+    color: alpha(currentColor, 0.3); }
 
 window.dialog.message {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
